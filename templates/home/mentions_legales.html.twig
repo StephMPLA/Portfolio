@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mentions légales{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/liens.js') }}" defer></script>
+{% endblock %}
+
+{% block body %}
+<section class="min-h-screen px-4 py-16">
+    <div class="max-w-3xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Mentions légales</h1>
+
+        <p><strong>Statut :</strong> Entrepreneur individuel (micro-entreprise)</p>
+        <p><strong>Responsable de la publication :</strong> Stéphane Mougeot</p>
+        <p><strong>Adresse :</strong> 24 rue E. de Vaudemange, 51380 Vaudemange</p>
+        <p><strong>SIRET :</strong> 910 474 477 00015</p>
+        <p><strong>Email</strong> : <span id="email"></span></p>
+        <p><strong>Téléphone</strong> : <span id="tel"></span></p>
+
+        <h2 class="text-2xl mt-8 mb-4 font-semibold">Hébergeur</h2>
+        <p><strong>Nom :</strong> O2Switch</p>
+        <p><strong>Adresse :</strong> Chemin des Pardiaux, 63000 Clermont-Ferrand, France</p>
+        <p><strong>Téléphone :</strong> 04 44 44 60 40</p>
+        <p><strong>Site :</strong> <a href="https://www.o2switch.fr" class="text-blue-500 underline" target="_blank">www.o2switch.fr</a></p>
+
+        <h2 class="text-2xl mt-8 mb-4 font-semibold">Propriété intellectuelle</h2>
+        <p>Ce site est la propriété exclusive de Stéphane Mougeot. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p>
+
+        <h2 class="text-2xl mt-8 mb-4 font-semibold">Responsabilité</h2>
+        <p>L’éditeur ne peut être tenu responsable d’éventuels dysfonctionnements ou erreurs liés à l’utilisation de ce site.</p>
+    </div>
+</section>
+{% endblock %}
