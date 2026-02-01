@@ -44,7 +44,7 @@ class ContactType extends AbstractType
                     new Assert\IsTrue(message: 'Consentement requis')
                 ]
             ])
-            ->add('website', HiddenType::class, [
+            ->add('website', TextType::class, [
                 'mapped' => false,
                 'required' => false
             ])

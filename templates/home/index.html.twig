@@ -18,9 +18,10 @@
                 class="mb-10 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
 
                 <!-- Image à gauche -->
-                <img
-                    src="images/moi.webp" alt="Stéphane Mougeot" class="w-30 h-[full] rounded-full object-cover "/>
-
+                <img src="{{ asset('images/moi.webp') }}"
+                     alt="Stéphane Mougeot"
+                     loading="lazy"
+                     class="w-30 rounded-full object-cover">
                 <!-- Texte à droite -->
                 <div>
                     <h1 class="text-2xl md:text-4xl font-medium italic font-playfair">Stéphane Mougeot</h1>
@@ -473,7 +474,9 @@
                         </h2>
 
                         {{ form_start(form, {'attr': {'class': 'space-y-6'}}) }}
-
+                        <div style="display:none">
+                            {{ form_row(form.website) }}
+                        </div>
                         <div>
                             {{ form_label(form.nom, null, {'label_attr': {'class': 'block mb-1 text-sm'}}) }}
                             {{ form_widget(form.nom, {'attr': {'class': 'w-full px-4 py-2 bg-[var(--color-background)] text-[var(--color-text)] border-[var(--color-text)]
