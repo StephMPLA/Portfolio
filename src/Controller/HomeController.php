@@ -52,7 +52,8 @@ final class HomeController extends AbstractController
 
             $this->addFlash('success', 'Message envoyé avec succès');
 
-            return $this->redirectToRoute('app_home');
+            return $this->redirectToRoute('app_home', [], 303)
+                ->setTargetUrl($this->generateUrl('app_home').'#contact');
         }
 
         return $this->render('home/index.html.twig', [

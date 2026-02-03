@@ -17,7 +17,14 @@
 <body class="bg-[#0b1220] text-slate-200">
 
 {% include 'partials/_header.html.twig' %}
-
+{% for message in app.flashes('success') %}
+    <div class="max-w-6xl mx-auto px-6 pt-6">
+        <div class="bg-green-600/20 border border-green-500 text-green-300
+                    px-6 py-4 rounded-lg shadow">
+            {{ message }}
+        </div>
+    </div>
+{% endfor %}
 {% block body %}{% endblock %}
 
 {% include 'partials/_footer.html.twig' %}
