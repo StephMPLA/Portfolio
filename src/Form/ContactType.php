@@ -19,8 +19,10 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('nom', TextType::class, [
+                'trim' => true,
                 'constraints' => [
-                    new Assert\NotBlank()
+                    new Assert\NotBlank(),
+                    new Assert\Length(max: 120)
                 ]
             ])
 
@@ -34,7 +36,10 @@ class ContactType extends AbstractType
             ->add('message', TextareaType::class, [
                 'constraints' => [
                     new Assert\NotBlank(),
-                    new Assert\Length(min: 10)
+                    new Assert\Length(
+                        min: 10,
+                        max: 2000
+                    )
                 ]
             ])
 
@@ -46,7 +51,8 @@ class ContactType extends AbstractType
             ])
             ->add('website', TextType::class, [
                 'mapped' => false,
-                'required' => false
+                'required' => false,
+                'label' => false
             ])
             ->add('envoyer', SubmitType::class);
     }

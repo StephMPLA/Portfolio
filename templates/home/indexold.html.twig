@@ -1,0 +1,609 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stéphane Mougeot
+{% endblock %}
+
+{% block body %}
+    <section class="min-h-screen bg-background text-text px-6 md:px-10 lg:px-20 py-16 lg:text-3xl ">
+
+        <div
+            class="max-w-3xl mx-auto">
+            {% for message in app.flashes('success') %}
+                <div class="mb-6 p-4 bg-green-600 text-back text-center font-semibold rounded-lg shadow">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            <!-- Titre -->
+            <div
+                class="mb-10 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+
+                <!-- Image à gauche -->
+                <img src="{{ asset('images/moi.webp') }}"
+                     alt="Stéphane Mougeot"
+                     loading="lazy"
+                     class="w-30 rounded-full object-cover">
+                <!-- Texte à droite -->
+                <div>
+                    <h1 class="text-2xl md:text-4xl font-medium italic font-playfair">Stéphane Mougeot</h1>
+                    <h2 class="text-1xl md:text-3xl mt-3">Développeur PHP/Symfony</h2>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-sm md:text-base text-center md:text-left">
+                    Créateur de contenu, développeur passionné par les nouvelles technologies.		</p>
+                <p class="text-sm md:text-base text-center md:text-left">
+                    Ouvert à la mobilité géographique selon les opportunités. 	</p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-8 mt-10">
+                <a href="https://www.youtube.com/@StephMPLA" class="flex-1 text-center px-6 py-2 border border-[var(--color-text)] text-[var(--color-text)] font-semibold rounded-xl hover:bg-[var(--color-hover)] transition-colors duration-200">
+
+                    Youtube
+                </a>
+                <a href="https://github.com/StephMPLA" class="flex-1 text-center px-6 py-2 border border-[var(--color-text)] text-[var(--color-text)] font-semibold rounded-xl hover:bg-[var(--color-hover)] transition-colors duration-200">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/stéphane-mougeot/" class="flex-1 text-center px-6 py-2 border border-[var(--color-text)] text-[var(--color-text)] font-semibold rounded-xl hover:bg-[var(--color-hover)] transition-colors duration-200">
+                    LinkedIn
+                </a>
+            </div>
+
+            <!-- Infos -->
+
+            <div class="mt-16">
+                <h3 class="text-2xl font-playfair mb-4">À propos</h3>
+
+                <div class="text-sm md:text-base leading-relaxed space-y-4">
+
+                    {#<p>#}
+                    {#Développeur Web orienté backend, titulaire du titre professionnel Développeur Web & Web Mobile (Bac+2), je poursuis ma montée en compétences à travers des projets personnels, du freelancing et une pratique régulière du développement.#}
+                    {#</p>#}
+
+                    {#<p>#}
+                    {#J’accorde une grande importance à la qualité du code, à la sécurité et à la performance. J’aime comprendre en profondeur les technologies que j’utilise, améliorer mes projets et apprendre continuellement. #}
+                    {#</p>#}
+
+                    {#<p>#}
+                    {#Après une première carrière dans le transport, j’ai entrepris une reconversion réussie vers l’informatique. Je suis autonome, rigoureux, curieux et investi. Je progresse chaque jour grâce à des projets concrets, de la veille technique et des exercices réguliers.#}
+                    {#</p>#}
+
+                    {#<p>#}
+                    {#Je développe également des projets autour du jeu vidéo, de la 3D, de la VR/AR et de Unity, ce qui enrichit ma vision technique et ma capacité d’adaptation.#}
+                    {#</p>#}
+
+                    {#<p>#}
+                    {#Aujourd’hui, je recherche une opportunité professionnelle ou une alternance pour continuer à évoluer au sein d’une équipe expérimentée, contribuer à des projets réels et renforcer mes compétences en backend.#}
+                    {#</p>#}
+                    <p>
+                        Développeur PHP / Symfony (Bac+2), orienté backend et bonnes pratiques.</p>
+                    <p>Applications Symfony structurées, sécurité, logique métier, composants Twig réutilisables.</p>
+                    <p>Reconversion informatique, profil rigoureux et fiable.</p>
+                    <p>Projets complémentaires en Unity / C# (2D, 3D, VR, AR).</p>
+                    <p>
+                        Je recherche une opportunité professionnelle ou une alternance pour évoluer au sein d’une équipe expérimentée sur des projets backend.
+                    </p>
+
+
+                </div>
+            </div>
+
+            <div class="mt-16">
+                <h3 class="text-2xl font-playfair mb-4">Expériences</h3>
+
+                <ul class="space-y-6 text-sm md:text-base">
+
+                    <li>
+                        <h4 class="font-semibold text-lg">Développeur Web Freelance – La Palme Numérique</h4>
+                        <p class="text-gray-400">2022 – Aujourd’hui</p>
+
+                        <p class="mt-1">
+                            Développement de sites web sur mesure (PHP, Symfony, Tailwind) :
+                        </p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>développement backend</li>
+                            <li>architecture applicative</li>
+                            <li>composants Twig réutilisables</li>
+                            <li>déploiement professionnel</li>
+                            <li>optimisation SEO</li>
+                            <li>sécurité applicative</li>
+                            <li>accompagnement client</li>
+                            <li>solutions AR/VR</li>
+                            <li>support technique</li>
+                        </ul>
+
+
+                        <div class="mt-4">
+                            <a href="https://lapalmenumerique.fr"
+                               class="inline-block px-6 py-2 border border-[var(--color-text)]
+                  text-[var(--color-text)] font-semibold rounded-xl
+                  hover:bg-[var(--color-hover)] transition-colors duration-200">
+                                Voir La Palme Numérique
+                            </a>
+                        </div>
+
+                        <div class="mt-6 p-5">
+                            <h5 class="font-semibold mb-2">Dossier technique — Projets personnels</h5>
+                            <p class="text-gray-400 mb-3 text-sm">
+                                Architecture Symfony, choix techniques, sécurité, logique métier,
+                                composants réutilisables et structure des projets.
+                            </p>
+
+                            <a href="/documents/MougeotStephaneDossierProjetsPersonnel.pdf"
+                               download
+                               class="inline-block px-6 py-2 border border-[var(--color-text)]
+                  text-[var(--color-text)] font-semibold rounded-xl
+                  hover:bg-[var(--color-hover)] transition-colors duration-200">
+                                Télécharger le dossier de projets personnels (PDF)
+                            </a>
+                        </div>
+
+                    </li>
+
+
+                    <!-- Formateur Unity Freelance -->
+                    <li>
+                        <h4 class="font-semibold text-lg">Formateur Unity Freelance</h4>
+                        <p class="text-gray-400">2023-2025</p>
+                        <p class="mt-1">
+                            Interventions pour des organismes de formation certifiés Qualiopi. Encadrement d’apprenants, création de supports pédagogiques et réalisation de démonstrations techniques (2D, 3D, AR/VR).
+                        </p>
+                    </li>
+
+
+                    <!-- Création de formation Unity -->
+                    <li>
+                        <h4 class="font-semibold text-lg">Auteur d'une formation Unity – Tuto.com</h4>
+                        <p class="text-gray-400">2023</p>
+                        <p class="mt-1">
+                            Conception et enregistrement d’une formation complète sur la création d’un shoot’em up 2D avec Unity et C#. Plusieurs dizaines d’heures de cours, exercices et projet final.
+                        </p>
+                    </li>
+                    <div class="mt-6">
+                        <a href="https://fr.tuto.com/unity/formation-unity-jeu-shoot-em-up,187241.html"
+                           class="flex-1 text-center px-6 py-2 border border-[var(--color-text)]
+              text-[var(--color-text)] font-semibold rounded-xl
+              hover:bg-[var(--color-hover)] transition-colors duration-200">
+                            Formation Unity
+                        </a>
+
+                    </div>
+
+                    <!-- Chauffeur / Transport -->
+                    <li>
+                        <h4 class="font-semibold text-lg">Chauffeur routier - National et International</h4>
+                        <p class="text-gray-400">1999 – 2021</p>
+                        <p class="mt-1">
+                            Organisation logistique, rigueur professionnelle, gestion des priorités, autonomie complète.
+                            (Cette expérience apporte discipline, sens des responsabilités et gestion du stress, utiles en développement.)
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="mt-16">
+                <h3 class="text-2xl font-playfair mb-4">Formations</h3>
+
+                <ul class="space-y-10 md:text-base">
+
+                    <!-- ENI -->
+                    <li>
+                        <h4 class="font-semibold text-lg">
+                            Titre professionnel – Développeur Web & Web Mobile (Bac+2)
+                        </h4>
+                        <p class="text-gray-400 text-base">
+                            ENI École Informatique — 2025
+                        </p>
+
+                        <p class="mt-2">
+                            Formation complète couvrant le développement web : conception,
+                            programmation, architecture MVC, sécurité, gestion de projet
+                            et bonnes pratiques professionnelles.
+                        </p>
+
+                        <p class="mt-4 font-semibold">Langages & technologies étudiés :</p>
+
+                        <ul class="list-disc ml-6 mt-3 space-y-2">
+                            <li>HTML5 / CSS3 — responsive, accessibilité</li>
+                            <li>JavaScript — DOM, AJAX, logique applicative</li>
+                            <li>PHP — POO, MVC, sécurité</li>
+                            <li>Symfony — routes, contrôleurs, Doctrine, services</li>
+                            <li>Java — POO, collections, exceptions</li>
+                            <li>Spring Boot — API REST, MVC</li>
+                            <li>SQL / MySQL — conception & requêtes</li>
+                            <li>WordPress — thème enfant</li>
+                            <li>Git / GitHub — versioning</li>
+                        </ul>
+                    </li>
+
+                    <!-- Unity -->
+                    <li>
+                        <h4 class="font-semibold text-lg">
+                            Développement de jeux vidéo – Unity & C#
+                        </h4>
+                        <p class="text-gray-400">
+                            3W Academy — 2021
+                        </p>
+
+                        <p class="mt-2">
+                            Formation complète Unity 2D/3D et C# : UI, animations,
+                            physique, optimisation, organisation de projet
+                            et pipeline de production.
+                        </p>
+
+                        <p class="mt-2">
+                            Certification obtenue :
+                            <strong>Unity Certified Associate – Game Developer</strong>.
+                        </p>
+                    </li>
+
+                    <!-- TOSA -->
+                    <li>
+                        <h4 class="font-semibold text-lg">
+                            TOSA Photoshop
+                        </h4>
+                        <p class="text-gray-400 text-sm">
+                            M2I Formations — 2018
+                        </p>
+
+                        <p class="mt-2">
+                            Retouche avancée, colorimétrie, détourage,
+                            calques, masques, optimisation d’images pour le web
+                            et bonnes pratiques de composition visuelle.
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <div class="mt-16">
+                <h3 class="text-2xl font-playfair mb-4">Projets</h3>
+
+                <!-- PROJETS PROFESSIONNELS -->
+                <h4 class="text-xl font-semibold mb-3">Projets Web Professionnels</h4>
+                <ul class="list-disc ml-6 space-y-8 md:text-base">
+
+                    <!-- La Palme Numérique -->
+                    <li>
+                        <strong>La Palme Numérique</strong> —
+                        Site professionnel développé en PHP/Symfony, Tailwind CSS et services backend sécurisés.
+                        Intègre un système de contact protégé, un design responsive, de bonnes performances et un hébergement optimisé.
+
+                        <div class="mt-4">
+                            <a href="https://lapalmenumerique.fr"
+                               class="inline-block px-6 py-2 border border-[var(--color-text)]
+                      text-[var(--color-text)] font-semibold rounded-xl
+                      hover:bg-[var(--color-hover)] transition-colors duration-200">
+                                La Palme Numérique
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Bettina -->
+                    <li>
+                        <strong>Site vitrine – Bettina (Naturopathe)</strong> —
+                        Développement complet d’un site vitrine sous Symfony avec un design doux et professionnel.
+                        Intégration d’une carte Leaflet, couleurs dynamiques selon les saisons, optimisation SEO avancée,
+                        score <strong>A+</strong> SSL Labs, en-têtes de sécurité renforcées, protection anti-spam,
+                        responsive design et accessibilité conforme Wave.
+
+                        <div class="mt-4">
+                            <a href="https://bettina-naturopathe.fr/"
+                               class="inline-block px-6 py-2 border border-[var(--color-text)]
+                      text-[var(--color-text)] font-semibold rounded-xl
+                      hover:bg-[var(--color-hover)] transition-colors duration-200">
+                                Bettina-naturopathe
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Angélique Rosalie Rebout -->
+                    <li>
+                        <strong>Landing page – Angélique Rosalie Rebout</strong> —
+                        Développement d’une page d’accueil moderne et responsive sous Symfony et Tailwind CSS.
+                        Intégration d’une carte Leaflet, d’un formulaire de contact sécurisé respectant le RGPD,
+                        animations douces et bonnes pratiques d’accessibilité.
+
+                        <div class="mt-4">
+                            <a href="https://angelique-rosalie-rebout.fr/"
+                               class="inline-block px-6 py-2 border border-[var(--color-text)]
+                      text-[var(--color-text)] font-semibold rounded-xl
+                      hover:bg-[var(--color-hover)] transition-colors duration-200">
+                                Angélique Rosalie Rebout
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+                </ul>
+                <!-- PROJETS WEB -->
+                <h4 class="text-xl font-semibold mt-8 mb-3">
+                    Projets Web réalisés durant la formation à l’ENI École Informatique (Titre Professionnel)
+                </h4><ul class="list-disc ml-6 space-y-3 text-sm md:text-base">
+
+                    <li>
+                        <strong>Plateforme Symfony – Sorties entre amis</strong> —
+                        Création d’événements, gestion des participants, rôles utilisateurs, sécurité et base de données complète.
+                        Projet réalisé durant la formation ENI.
+                    </li>
+
+                    <li>
+                        <strong>Application Spring Boot – Site d’enchères</strong> —
+                        Back-office complet, API REST, gestion des rôles, enchères, interface, MVC Java et architecture robuste.
+                    </li>
+
+                    <li>
+                        <strong>Site WordPress</strong> —
+                        Site vitrine personnalisé via thème enfant, menus, galeries, pages statiques et bonnes pratiques d’optimisation.
+                    </li>
+
+                    <li>
+                        <strong>Jeu Memory (HTML, CSS, JavaScript)</strong> —
+                        Jeu complet avec retournement de cartes, sauvegarde du score via LocalStorage.
+
+                        <div class="mt-4">
+                            <a href="https://memory.lapalmenumerique.fr/"
+                               class="inline-block px-6 py-2 border border-[var(--color-text)]
+                  text-[var(--color-text)] font-semibold rounded-xl
+                  hover:bg-[var(--color-hover)] transition-colors duration-200">
+                                Jeu Memory
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <strong>Application React + ASP.NET</strong> —
+                        Projet de stage : application interne avec React, formulaires avancés, gestion d’état, appels API et backend ASP.NET.
+                    </li>
+
+                </ul>
+
+                <!-- PROJETS JEUX VIDÉO / UNITY -->
+                <h4 class="text-xl font-semibold mt-10 mb-3">Projets Jeux Vidéo & 3D</h4>
+                <ul class="list-disc ml-6 space-y-3 md:text-base">
+                    <li class="mt-4">
+                        <a href="https://stephmpla.itch.io/"
+                           class="inline-block px-6 py-2 border border-[var(--color-text)]
+              text-[var(--color-text)] font-semibold rounded-xl
+              hover:bg-[var(--color-hover)] transition-colors duration-200">
+                            Projets jouables sur Itch.io
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Shoot’em up 2D – Unity</strong> —
+                        Jeu complet avec mouvements, tirs, collisions, IA ennemie, scoring, particules et menus.
+                        Base du cours Unity vendu sur Tuto.com.
+                    </li>
+                    <li>
+                        <strong>Dionakra – Remake Arkanoid</strong> —
+                        Reproduction du gameplay d’Arkanoid sous Unity, incluant gestion des briques,
+                        collisions, bonus et un éditeur simple de niveaux. Jouable en ligne sur itch.io.
+                    </li>
+                    <li>
+                        <strong>Shooting Training – Unity</strong> —
+                        Jeu d’entraînement au tir réalisé sous Unity, cibles dynamiques, statistiques de tirs,
+                        scoring et interface simple. Jouable en ligne via itch.io.
+                    </li>
+                    <li>
+                        <strong>PiewPiewBird – Remake de Flappy Bird</strong> —
+                        Version personnelle développée sous Unity, avec obstacles dynamiques, scoring et jouable en ligne sur itch.io.
+                    </li>
+
+                    <li>
+                        <strong>Galerie photo 3D – Unity</strong> —
+                        Galerie interactive 3D pour tablette, également disponible en WebGL avec navigation fluide.
+                    </li>
+
+                    <li>
+                        <strong>Expériences Unity VR/AR</strong> —
+                        Prototypes immersifs avec interactions VR, scènes 3D, et démonstrations AR via Vuforia.
+                    </li>
+                    <li>
+                        <strong>Modélisation 3D & Modding véhicules – Jeux vidéo</strong> —
+                        Réalisation de modèles 3D complets destinés au modding et à l’intégration dans des moteurs de jeu,
+                        notamment pour Assetto Corsa. Création de véhicules tels que l’Alfa Romeo Mille Miglia 1938,
+                        la Coccinelle 1960, ainsi que la locomotive de Langres publiée sur ArtStation. Modélisation,
+                        UV, textures, optimisation.
+                    </li>
+                    <div class="mt-6">
+                        <a href="https://www.artstation.com/stephmpla"
+                           class="flex-1 text-center px-6 py-2 border border-[var(--color-text)]
+              text-[var(--color-text)] font-semibold rounded-xl
+              hover:bg-[var(--color-hover)] transition-colors duration-200">
+                            ArtStation
+                        </a>
+                    </div>
+                </ul>
+                <div class="relative w-full max-w-3xl mx-auto overflow-hidden rounded-lg shadow-lg mt-10">
+                    <!-- Slides -->
+                    <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                        <img src="/images/1.webp" class="carousel-image cursor-pointer" alt="Alfa Roméo Mile Miglia de 1938 vue de face" />
+                        <img src="/images/2.webp" class="carousel-image cursor-pointer" alt="Alfa Roméo Mile Miglia de 1938 vue de derrière" />
+                        <img src="/images/3.webp" class="carousel-image cursor-pointer" alt="Alfa Roméo Mile Miglia de 1938 vue coté droit" />
+                    </div>
+
+                    <!-- Boutons -->
+                    <button id="prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow text-black hover:bg-white">&#8592;</button>
+                    <button id="next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow text-black  hover:bg-white">&#8594;</button>
+                </div>
+            </div>
+
+
+            <!-- Un peu plus sur moi -->
+            <div class="mt-16">
+                <h2 class="text-2xl font-playfair mb-4">Mes engagements techniques</h2>
+                <ul class="list-disc space-y-3 text-sm md:text-base">
+                    <li><strong>Déploiement :</strong> configuration de serveurs mutualisés ou séparés, nom de domaine, DNS, sous-domaines, base de données, FTP, accès HTTPS, etc.</li>
+
+                    <li><strong>Référencement naturel (SEO) :</strong> structure sémantique optimisée, vitesse de chargement, sitemap, balises meta, URL propres, et accessibilité.</li>
+
+                    <li><strong>Sécurité web :</strong> formulaires protégés (CSRF, spam bots), en-têtes HTTP sécurisées, protection contre le vol de contenu, gestion des rôles utilisateurs et droits d’accès.</li>
+
+                    <li><strong>Performance :</strong> optimisations Tailwind CSS, minification, chargement différé des assets, cache navigateur, responsive design performant sur mobile et desktop.</li>
+
+                    <li><strong>Expérience utilisateur :</strong> interface claire, navigation fluide, animations douces, formulaires ergonomiques et messages de confirmation clairs.</li>
+
+                    <li><strong>Respect des normes RGPD :</strong> consentement explicite, formulaire clair, mentions légales, politique de confidentialité et traitement éthique des données.</li>
+
+                    <li><strong>Autonomie complète :</strong> je gère l’ensemble du projet, de la conception au déploiement final, en m’adaptant aux besoins et au budget du client.</li>
+                </ul>
+            </div>
+
+            <!-- Un peu plus sur moi -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-playfair mb-4">Un peu plus sur moi</h3>
+                <ul class="list-disc space-y-3 text-sm md:text-base">
+                    <li>Autodidacte passionné par les nouvelles technologies, je suis naturellement curieux, rigoureux et animé par une forte conscience professionnelle.</li>
+                    <li>Je développe également des jeux vidéo et des expériences interactives (VR/AR) avec Unity, par passion et par curiosité technique. Retrouvez mes créations sur
+                        <a href="https://stephmpla.itch.io/" target="_blank" rel="noreferrer noopener" class="font-bold underline">itch.io</a>.</li>
+
+                    <li>J'aime améliorer mes compétences chaque jour : petits projets perso, veille tech, documentation…</li>
+
+                </ul>
+            </div>
+
+
+            <section class="px-4 py-20" id="contact">
+                <div class="max-w-3xl mx-auto">
+                    <div class="mt-16">
+                        <h2 class="text-3xl font-playfair mb-4 text-center">Me contacter
+                        </h2>
+
+                        {{ form_start(form, {'attr': {'class': 'space-y-6'}}) }}
+                        <div style="display:none">
+                            {{ form_row(form.website) }}
+                        </div>
+                        <div>
+                            {{ form_label(form.nom, null, {'label_attr': {'class': 'block mb-1 text-sm'}}) }}
+                            {{ form_widget(form.nom, {'attr': {'class': 'w-full px-4 py-2 bg-[var(--color-background)] text-[var(--color-text)] border-[var(--color-text)]
+ border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-[#156082]'}}) }}
+                            {{ form_errors(form.nom) }}
+                        </div>
+
+                        <div>
+                            {{ form_label(form.email, null, {'label_attr': {'class': 'block mb-1 text-sm'}}) }}
+                            {{ form_widget(form.email, {'attr': {'class': 'w-full px-4 py-2 bg-[var(--color-background)] text-[var(--color-text)] border-[var(--color-text)]
+ border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-[#156082]'}}) }}
+                            {{ form_errors(form.email) }}
+                        </div>
+
+                        <div>
+                            {{ form_label(form.message, null, {'label_attr': {'class': 'block mb-1 text-sm'}}) }}
+                            {{ form_widget(form.message, {'attr': {'class': 'w-full px-4 py-2 bg-[var(--color-background)] text-[var(--color-text)] border-[var(--color-text)]
+ border border-gray-600 rounded h-40 resize-none focus:outline-none focus:ring-2 focus:ring-[#156082]'}}) }}
+                            {{ form_errors(form.message) }}
+                        </div>
+
+                        <div class="flex items-start gap-2 mt-4">
+                            {{ form_widget(form.rgpd, {
+                                attr: {
+                                    class: 'mt-1'
+                                }
+                            }) }}
+                            <span class="text-sm leading-tight">
+								J'accepte que mes données soient utilisées pour être recontacté(e)
+							</span>
+                        </div>
+                        <div class=" flex justify-center">
+                            {{ form_widget(form.envoyer, {
+                                attr: {
+                                    class: 'px-6 py-2 border border-[var(--color-text)] text-[var(--color-text)] font-semibold rounded-xl hover:bg-[var(--color-hover)] transition-colors duration-200 cursor-pointer'
+                                }
+                            }) }}
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+            </section>
+
+        </div>
+        </div>
+    </section>
+    <section class="min-h-screen bg-background text-text px-6 md:px-10 lg:px-20 py-16 lg:text-3xl ">
+        <div
+            class="max-w-3xl mx-auto">
+    <!-- Accordion Item 1 -->
+    <div class="border-b border-slate-200">
+        <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
+            <span>What is Material Tailwind?</span>
+            <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+      </svg>
+    </span>
+        </button>
+        <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="pb-5 text-sm text-slate-500">
+                Material Tailwind is a framework that enhances Tailwind CSS with additional styles and components.
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion Item 2 -->
+    <div class="border-b border-slate-200">
+        <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-slate-800">
+            <span>How to use Material Tailwind?</span>
+            <span id="icon-2" class="text-slate-800 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+      </svg>
+    </span>
+        </button>
+        <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="pb-5 text-sm text-slate-500">
+                You can use Material Tailwind by importing its components into your Tailwind CSS project.
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion Item 3 -->
+    <div class="border-b border-slate-200">
+        <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-slate-800">
+            <span>What can I do with Material Tailwind?</span>
+            <span id="icon-3" class="text-slate-800 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+      </svg>
+    </span>
+        </button>
+        <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="pb-5 text-sm text-slate-500">
+                Material Tailwind allows you to quickly build modern, responsive websites with a focus on design.
+            </div>
+        </div>
+    </div>
+            </div>
+    </section>
+    <script>
+        function toggleAccordion(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+
+            // SVG for Minus icon
+            const minusSVG = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z" />
+      </svg>
+    `;
+
+            // SVG for Plus icon
+            const plusSVG = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+      </svg>
+    `;
+
+            // Toggle the content's max-height for smooth opening and closing
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0';
+                icon.innerHTML = plusSVG;
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.innerHTML = minusSVG;
+            }
+        }
+    </script>
+{% endblock %}

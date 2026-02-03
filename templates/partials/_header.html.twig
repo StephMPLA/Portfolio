@@ -1,5 +1,40 @@
-<header>
-    <nav>
+<header class="fixed top-0 left-0 w-full z-50
+               border-b border-slate-800
+               bg-[#0f172a]/90 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+
+        <!-- LOGO / NOM -->
+        <h1 class="text-xl font-semibold text-white">
+            Stéphane Mougeot
+        </h1>
+
+        <!-- MENU DESKTOP -->
+        <nav class="hidden md:flex gap-6 text-sm">
+            <a href="#projets" class="hover:text-blue-400">Projets</a>
+            <a href="#competences" class="hover:text-blue-400">Compétences</a>
+            <a href="#experiences" class="hover:text-blue-400">Expériences</a>
+            <a href="#formations" class="hover:text-blue-400">Formations</a>
+            <a href="#contact" class="hover:text-blue-400">Contact</a>
+        </nav>
+
+        <!-- BURGER MOBILE -->
+        <button onclick="toggleMenu()"
+                class="md:hidden text-white text-2xl"
+                aria-label="Menu">
+            ☰
+        </button>
+
+    </div>
+
+    <!-- MENU MOBILE -->
+    <nav id="mobileMenu"
+         class="hidden md:hidden flex flex-col gap-8 px-6 pb-6 text-base bg-[#0f172a] border-t border-slate-800">
+
+        <a href="#projets" onclick="toggleMenu()" class="hover:text-blue-400">Projets</a>
+        <a href="#competences" onclick="toggleMenu()" class="hover:text-blue-400">Compétences</a>
+        <a href="#experiences" onclick="toggleMenu()" class="hover:text-blue-400">Expériences</a>
+        <a href="#formations" onclick="toggleMenu()" class="hover:text-blue-400">Formations</a>
+        <a href="#contact" onclick="toggleMenu()" class="hover:text-blue-400">Contact</a>
 
     </nav>
 </header>

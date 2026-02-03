@@ -12,14 +12,16 @@ use App\Form\ContactType;
 use Symfony\Component\HttpFoundation\Request;
 final class HomeController extends AbstractController
 {
-    #[Route('/', name: 'app_home')]
+    #[Route('/', name: 'app_home', methods: ['GET','POST'])]
     public function index(
         Request $request,
         MailerInterface $mailer,
         RateLimiterFactory $contactFormLimiter
-    ): Response    {
+    ): Response {
+
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
 
             // honeypot
@@ -30,23 +32,33 @@ final class HomeController extends AbstractController
             // rate limit
             $limit = $contactFormLimiter->create($request->getClientIp());
             if (!$limit->consume()->isAccepted()) {
-                return new Response('Too many attempts', 429);
+                return new Response('Trop de tentatives', 429);
             }
 
             $data = $form->getData();
 
             $email = (new Email())
-                ->from($data['email'])
-                ->to('ton@email.fr')
-                ->subject('Message portfolio')
-                ->text($data['message']);
+                ->from('contact@lapalmenumerique.fr')
+                ->to('stephane.mougeot@hotmail.fr')
+                ->replyTo($data['email'])
+                ->subject('Nouveau message portfolio')
+                ->text(
+                    "Nom : {$data['nom']}\n" .
+                    "Email : {$data['email']}\n\n" .
+                    $data['message']
+                );
 
             $mailer->send($email);
+
+            $this->addFlash('success', 'Message envoyé avec succès');
+
+            return $this->redirectToRoute('app_home');
         }
 
         return $this->render('home/index.html.twig', [
             'form' => $form->createView(),
         ]);
     }
+
 
 }

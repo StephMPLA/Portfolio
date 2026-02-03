@@ -1,3 +1,12 @@
 @import "tailwindcss";
-
-
+:root {
+    --radix-blue-1: #0b1220;
+    --radix-blue-2: #0f172a;
+    --radix-blue-3: #13203a;
+    --radix-blue-4: #1b2b4a;
+    --radix-accent: #3b82f6;
+}
+body{
+    background: #0D1520;
+    color: #f0f8ff;
+}
