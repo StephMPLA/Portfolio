@@ -53,8 +53,7 @@ class ContactType extends AbstractType
                 'mapped' => false,
                 'required' => false,
                 'label' => false
-            ])
-            ->add('envoyer', SubmitType::class);
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

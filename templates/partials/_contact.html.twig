@@ -1,22 +1,20 @@
 <section id="contact" class="max-w-3xl mx-auto px-6 py-20">
-
     <h3 class="text-3xl font-semibold text-white mb-8">
         Me contacter
     </h3>
     {% for msg in app.flashes('success') %}
-        <div class="bg-green-600 text-white p-4 rounded mb-6">
+        <div class="mb-6 p-4 rounded-lg bg-green-600 text-white
+                text-center font-semibold shadow-lg mt-6">
             {{ msg }}
         </div>
     {% endfor %}
     <div class="bg-[#13203a] border border-slate-800 rounded-xl p-8 shadow-xl">
-
         {{ form_start(form, {
             attr: {
                 class: 'space-y-6',
                 'data-turbo': 'false'
             }
         }) }}
-
         {# NOM #}
         <div>
             <label class="block text-sm font-medium text-slate-300 mb-2">
@@ -29,7 +27,6 @@
             }) }}
             {{ form_errors(form.nom) }}
         </div>
-
         {# EMAIL #}
         <div>
             <label class="block text-sm font-medium text-slate-300 mb-2">
@@ -42,7 +39,6 @@
             }) }}
             {{ form_errors(form.email) }}
         </div>
-
         {# MESSAGE #}
         <div>
             <label class="block text-sm font-medium text-slate-300 mb-2">
@@ -56,17 +52,17 @@
             }) }}
             {{ form_errors(form.message) }}
         </div>
-
-        {# RGPD light #}
         <div class="flex items-start gap-3 text-sm text-slate-400">
-            <input type="checkbox" required
-                   class="mt-1 accent-blue-500">
+            {{ form_widget(form.rgpd, {
+                attr: { class: 'mt-1 accent-blue-500' }
+            }) }}
             <span>
-                J’accepte que mes informations soient utilisées uniquement
-                pour être recontacté dans le cadre de cette demande.
-            </span>
+        J’accepte que mes informations soient utilisées uniquement
+        pour être recontacté dans le cadre de cette demande.
+    </span>
         </div>
-
+        {{ form_errors(form.rgpd) }}
+        {{ form_widget(form.website, { attr: { class: 'hidden' } }) }}
         {# BOUTON #}
         <div class="pt-4">
             <button type="submit"
@@ -75,8 +71,6 @@
                 Envoyer le message
             </button>
         </div>
-
-        {{ form_end(form, { render_rest: false }) }}
-
+        {{ form_end(form) }}
     </div>
 </section>

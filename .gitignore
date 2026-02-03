@@ -2,6 +2,8 @@
 .idea/
 .vscode/
 ###> symfony/framework-bundle ###
+/.env.dev
+/.env.test
 /.env.local
 /.env.local.php
 /.env.*.local
@@ -20,3 +22,8 @@
 /public/assets/
 /assets/vendor/
 ###< symfony/asset-mapper ###
+# archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz

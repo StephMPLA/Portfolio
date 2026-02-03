@@ -16,7 +16,8 @@ final class HomeController extends AbstractController
     public function index(
         Request $request,
         MailerInterface $mailer,
-        RateLimiterFactory $contactFormLimiter
+        RateLimiterFactory $contactLimiter,
+
     ): Response {
 
         $form = $this->createForm(ContactType::class);
@@ -28,11 +29,12 @@ final class HomeController extends AbstractController
             if ($form->get('website')->getData()) {
                 return new Response('Spam détecté', 400);
             }
+            // Rate Limiter
+            $limiter = $contactLimiter->create($request->getClientIp() ?? 'unknown');
 
-            // rate limit
-            $limit = $contactFormLimiter->create($request->getClientIp());
-            if (!$limit->consume()->isAccepted()) {
-                return new Response('Trop de tentatives', 429);
+            if (!$limiter->consume(1)->isAccepted()) {
+                $this->addFlash('error', 'Trop de tentatives. Réessaie plus tard.');
+                return $this->redirectToRoute('app_home', ['_fragment' => 'contact']);
             }
 
             $data = $form->getData();
@@ -52,14 +54,12 @@ final class HomeController extends AbstractController
 
             $this->addFlash('success', 'Message envoyé avec succès');
 
-            return $this->redirectToRoute('app_home', [], 303)
-                ->setTargetUrl($this->generateUrl('app_home').'#contact');
+            return $this->redirectToRoute('app_home', ['_fragment' => 'contact']);
+
         }
 
         return $this->render('home/index.html.twig', [
             'form' => $form->createView(),
         ]);
     }
-
-
 }
