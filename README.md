@@ -1,4 +1,8 @@
-# Portfolio — Stéphane Mougeot
+## Project Status
+
+✔️ Stable version  
+✔️ Core features implemented  
+🧪 No longer actively developed# Portfolio — Stéphane Mougeot
 
 Personal developer portfolio focused on **PHP / Symfony backend development**.
 
