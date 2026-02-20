@@ -11,11 +11,11 @@
 
         <!-- MENU DESKTOP -->
         <nav class="hidden md:flex gap-6 text-sm">
-            <a href="#projets" class="hover:text-blue-400">Projets</a>
-            <a href="#competences" class="hover:text-blue-400">Compétences</a>
-            <a href="#experiences" class="hover:text-blue-400">Expériences</a>
-            <a href="#formations" class="hover:text-blue-400">Formations</a>
-            <a href="#contact" class="hover:text-blue-400">Contact</a>
+            <a href="{{ path('app_home') }}#projets" class="hover:text-blue-400">Projets</a>
+            <a href="{{ path('app_home') }}#competences" class="hover:text-blue-400">Compétences</a>
+            <a href="{{ path('app_home') }}#experiences" class="hover:text-blue-400">Expériences</a>
+            <a href="{{ path('app_home') }}#formations" class="hover:text-blue-400">Formations</a>
+            <a href="{{ path('app_home') }}#contact" class="hover:text-blue-400">Contact</a>
         </nav>
 
         <!-- BURGER MOBILE -->
@@ -31,11 +31,11 @@
     <nav id="mobileMenu"
          class="hidden md:hidden flex flex-col gap-8 px-6 pb-6 text-base bg-[#0f172a] border-t border-slate-800">
 
-        <a href="#projets" onclick="toggleMenu()" class="hover:text-blue-400">Projets</a>
-        <a href="#competences" onclick="toggleMenu()" class="hover:text-blue-400">Compétences</a>
-        <a href="#experiences" onclick="toggleMenu()" class="hover:text-blue-400">Expériences</a>
-        <a href="#formations" onclick="toggleMenu()" class="hover:text-blue-400">Formations</a>
-        <a href="#contact" onclick="toggleMenu()" class="hover:text-blue-400">Contact</a>
+        <a href="{{ path('app_home') }}#projets" onclick="toggleMenu()">Projets</a>
+        <a href="{{ path('app_home') }}#competences" onclick="toggleMenu()">Compétences</a>
+        <a href="{{ path('app_home') }}#experiences" onclick="toggleMenu()">Expériences</a>
+        <a href="{{ path('app_home') }}#formations" onclick="toggleMenu()">Formations</a>
+        <a href="{{ path('app_home') }}#contact" onclick="toggleMenu()">Contact</a>
 
     </nav>
 </header>
