@@ -52,7 +52,6 @@ Provide a clear overview of:
 - Tailwind CSS
 - Symfony Forms
 - Symfony Mailer
-- Symfony Rate Limiter
 
 ---
 
