@@ -17,7 +17,8 @@ final class HomeController extends AbstractController
         Request $request,
         MailerInterface $mailer,
         RateLimiterFactory $contactLimiter,
-
+        string $mail_from,
+        string $mail_to
     ): Response {
 
         $form = $this->createForm(ContactType::class);
@@ -40,8 +41,8 @@ final class HomeController extends AbstractController
             $data = $form->getData();
 
             $email = (new Email())
-                ->from('contact@lapalmenumerique.fr')
-                ->to('stephane.mougeot@hotmail.fr')
+                ->from($mail_from)
+                ->to($mail_to)
                 ->replyTo($data['email'])
                 ->subject('Nouveau message portfolio')
                 ->text(
