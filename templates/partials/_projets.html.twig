@@ -2,9 +2,63 @@
     <div class="max-w-6xl mx-auto px-6 py-16">
         <h3 class="text-3xl font-semibold text-white mb-8">Projets principaux</h3>
         <details class="bg-[#13203a] p-6 rounded-xl border border-slate-800">
+
+            <summary class="cursor-pointer font-semibold text-white text-lg">
+                Application web — Vehicle Sales Management — En cours de réalisation
+            </summary>
+
+            <button type="button"
+                    class="mt-4 w-full"
+                    onclick="event.stopPropagation(); openImage('/images/projets/vehicle-sales.png');">
+                <img src="/images/accueil.png"
+                     alt="Vehicle Sales Management — aperçu"
+                     class="w-full rounded-lg border border-slate-700 hover:opacity-90 transition cursor-zoom-in">
+            </button>
+
+            <div class="mt-5 space-y-4 text-base text-slate-300 leading-relaxed">
+
+                <p>
+                    Développement d’une application web Symfony simulant la gestion
+                    d’un catalogue de véhicules, de comptes utilisateurs et d’un
+                    processus de réservation.
+                </p>
+
+                <p>
+                    Projet personnel servant de support à la conception d’un backend
+                    structuré : organisation de la logique métier, architecture
+                    maintenable et mise en œuvre des bonnes pratiques Symfony.
+                </p>
+
+                <p>
+                    Code source :
+                    <a href="https://github.com/StephMPLA/vehicle-sales-management-ar"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-blue-400 hover:text-blue-300 underline underline-offset-4">
+                        Voir le projet sur GitHub ↗
+                    </a>
+                </p>
+
+                <details class="mt-4 text-base">
+                    <summary class="cursor-pointer text-blue-400 hover:text-blue-300">
+                        Voir éléments techniques
+                    </summary>
+
+                    <ul class="mt-3 text-slate-400 space-y-1">
+                        <li>• Symfony 7.4 / PHP 8.3</li>
+                        <li>• Modélisation métier avec Doctrine ORM</li>
+                        <li>• Dashboard administrateur et CRUD sécurisé</li>
+                        <li>• API REST partielle avec interactions AJAX</li>
+                        <li>• Diagramme UML documentant le domaine applicatif</li>
+                    </ul>
+                </details>
+
+            </div>
+        </details>
+        <details class="bg-[#13203a] p-6 rounded-xl border border-slate-800">
             <!-- SUMMARY : clic = déplier/replier -->
             <summary class="cursor-pointer font-semibold text-white text-lg">
-                Site web — La Palme Numérique — Septembre 2025
+                Projet entrepreneurial — La Palme Numérique — Septembre 2025
             </summary>
             <!-- IMAGE : clic = zoom (sans toggle) -->
             <button type="button"
@@ -52,6 +106,50 @@
                 </details>
             </div>
         </details>
+        <details class="bg-[#13203a] p-6 rounded-xl border border-slate-800">
+
+            <summary class="cursor-pointer font-semibold text-white text-lg">
+                Portfolio développeur backend — Stéphane Mougeot — 2026
+            </summary>
+
+
+            <div class="mt-5 space-y-4 text-base text-slate-300 leading-relaxed">
+
+                <p>
+                    Conception et développement de mon portfolio professionnel
+                    destiné à présenter mes projets backend Symfony, mon parcours
+                    de reconversion et mes compétences techniques.
+                </p>
+                <p>
+                    Code source de ce site :
+                    <a href="https://github.com/StephMPLA/Portfolio"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-blue-400 hover:text-blue-300 underline underline-offset-4">
+                        Voir le repository GitHub ↗
+                    </a>
+                </p>
+
+                <details class="mt-4 text-base">
+                    <summary class="cursor-pointer text-blue-400 hover:text-blue-300">
+                        Voir détails techniques
+                    </summary>
+
+                    <ul class="mt-3 text-slate-400 space-y-1">
+                        <li>• Symfony 7 / PHP 8</li>
+                        <li>• Formulaire de contact sécurisé</li>
+                        <li>• Validation serveur & protection CSRF</li>
+                        <li>• Honeypot anti-spam</li>
+                        <li>• Configuration par variables d’environnement</li>
+                        <li>• Architecture contrôleurs / formulaires propre</li>
+                        <li>• Tailwind CSS & design responsive</li>
+                    </ul>
+                </details>
+
+            </div>
+
+        </details>
+
         <details class="bg-[#13203a] p-6 rounded-xl border border-slate-800">
 
             <summary class="cursor-pointer font-semibold text-white text-lg">
